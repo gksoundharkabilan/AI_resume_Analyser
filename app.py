@@ -220,4 +220,5 @@ if uploaded_file is not None:
                     st.text(raw_text[:2000] + "...")
 
 else:
+
     st.info("Awaiting resume upload...")
