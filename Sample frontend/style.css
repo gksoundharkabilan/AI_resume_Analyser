@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ========= BACKGROUND ========= */
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #1f2937,
+    #2c3e50,
+    #374151,
+    #1e3a8a
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease infinite;
+  color: #e5e7eb;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+body::before {
+  background: #6366f1;
+  top: -100px;
+  left: -100px;
+}
+
+body::after {
+  background: #0ea5e9;
+  bottom: -120px;
+  right: -120px;
+}
+
+/* ========= NAVBAR ========= */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 14px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;   /* Reduced gap */
+}
+
+.nav-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #60a5fa;
+}
+
+/* ========= HERO ========= */
+.hero {
+  height: 90vh;  /* Reduced from 100vh */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 15px;  /* Reduced */
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 20px;  /* Reduced */
+  font-size: 15px;
+  color: #cbd5e1;
+}
+
+/* ========= BUTTON ========= */
+.btn-primary {
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+  padding: 10px 28px;
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.btn-primary:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+/* ========= SECTIONS (Reduced padding) ========= */
+.stats,
+.features,
+.upload-section,
+.cta {
+  padding: 60px 20px;   /* Reduced from 100px */
+  position: relative;
+  z-index: 1;
+}
+
+upload-section,button{
+  border-radius: 20;
+  padding: 2%;
+}
+/* ========= STATS ========= */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;   /* Reduced gap */
+  flex-wrap: wrap;
+}
+
+.stat-box h2 {
+  font-size: 36px;
+  color: #93c5fd;
+}
+
+.stat-box p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* ========= FEATURES ========= */
+.features {
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 20px;  /* Reduced gap */
+  margin-top: 30px;  /* Reduced */
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 25px;  /* Reduced */
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* ========= UPLOAD ========= */
+.upload-section {
+  text-align: center;
+}
+
+.upload-box {
+  margin: 30px auto;
+  padding: 35px;
+  border-radius: 18px;
+  max-width: 500px;
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.upload-box:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* ========= FOOTER ========= */
+footer {
+  padding: 30px;
+  text-align: center;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ========= RESPONSIVE ========= */
+@media(max-width: 768px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .stats {
+    gap: 25px;
+  }
+}

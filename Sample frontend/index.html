@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HireNixx | AI Resume Analyzer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">HireNixx</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#upload">Upload</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-toggle">☰</div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>AI Powered Resume Intelligence</h1>
+      <p>
+        Optimize your resume with real-time AI insights, keyword detection,
+        skill analysis and job match scoring.
+      </p>
+      <button class="btn-primary" onclick="scrollToUpload()">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stat-box">
+      <h2 class="counter" data-target="5000">0</h2>
+      <p>Resumes Analyzed</p>
+    </div>
+    <div class="stat-box">
+      <h2 class="counter" data-target="95">0</h2>
+      <p>Accuracy Rate %</p>
+    </div>
+    <div class="stat-box">
+      <h2 class="counter" data-target="1200">0</h2>
+      <p>Jobs Matched</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <h2>Why Choose HireNixx?</h2>
+
+    <div class="feature-grid">
+      <div class="card">
+        <h3>Smart AI Analysis</h3>
+        <p>Deep NLP powered analysis to evaluate structure, clarity and keywords.</p>
+      </div>
+
+      <div class="card">
+        <h3>ATS Optimization</h3>
+        <p>Ensure your resume passes Applicant Tracking Systems.</p>
+      </div>
+
+      <div class="card">
+        <h3>Skill Gap Detection</h3>
+        <p>Identify missing skills required for your target job role.</p>
+      </div>
+
+      <div class="card">
+        <h3>Instant Feedback</h3>
+        <p>Receive actionable improvement suggestions in seconds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upload Section -->
+  <section class="upload-section" id="upload">
+    <h2>Upload Your Resume</h2>
+    <div class="upload-box" id="drop-area">
+      <p>Drag & Drop Resume Here</p>
+      <span>or</span>
+      <input type="file" id="fileInput" hidden>
+      <button onclick="document.getElementById('fileInput').click()">
+        Choose File
+      </button>
+      <p id="file-name"></p>
+    </div>
+  </section>
+
+  <!-- CTA --><center>
+  <section class="cta">
+    <h2>Ready to Land Your Dream Job?</h2>
+    <button class="btn-primary">Start Analyzing</button>
+  </section></center>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div>
+      <h3>HireNixx</h3>
+      <p>AI Resume Analyzer Platform</p>
+    </div>
+
+    <div>
+      <p>© 2026 HireNixx. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
